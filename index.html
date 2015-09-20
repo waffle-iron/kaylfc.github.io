@@ -1,100 +1,82 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en-us" ng-app="app">
+<head>
     <meta charset="UTF-8">
-    <title>Sam K</title>
+    <title>Sam Kay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Styles/_home.css">
+    <link rel="stylesheet" type="text/css" href="Styles/_animations.css">
+</head>
 
-  </head>
- <body>
+<body>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>I'm Sam.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Title</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p>Etiam malesuada, nisi id fringilla tincidunt, orci ligula lacinia leo, eu euismod erat felis sit amet elit. Nam vulputate, neque id elementum ullamcorper, eros nibh viverra urna, eu elementum nisi mauris sit amet purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sit amet orci quis leo imperdiet sollicitudin at in dolor. Sed suscipit hendrerit neque. </p>
+    <section class="jumbotron" id="heading" ng-controller="HomeController as home" ng-cloak>
+        <div class="container">
+            <h1 class="title"
+                ng-click="home.changeArea()">Hello, 
+                <span class="change" ng-class="{ 'state1': home.stateChanged, 'state2': !home.stateChanged, 
+                'state3': home.hovering, 'state4': !home.hovering }">
+                {{home.area}}!</span>
+            </h1>
         </div>
-        
-        
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <h2>This</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>That</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>The other</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-      </div>
+    </section>
 
-      <hr>
+    <section class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Title</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p>Etiam malesuada, nisi id fringilla tincidunt, orci ligula lacinia leo, eu euismod erat felis sit amet elit. Nam vulputate, neque id elementum ullamcorper, eros nibh viverra urna, eu elementum nisi mauris sit amet purus. </p>
+          </div>
 
-      <footer>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <h2>This</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+              <h2>That</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+              <h2>The other</h2>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+
+        <hr>
+    </section>
+
+    <footer class="container">
         <p>© Sam Kay 2015</p>
-      </footer>
-    </div> <!-- /container -->
+    </footer>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  
-  
-<!-- 
-.page-header {
-    color: #fff;
-    text-align: center;
-    background-color: #159957;
-    background-image: linear-gradient(120deg, #155799, #159957);
-}
--->
     <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-67845729-1");
-    pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 
-  <style>
-  
-  body {
-    padding-bottom: 20px;
-  }
+        try {
+            var pageTracker = _gat._getTracker("UA-67845729-1");
+            pageTracker._trackPageview();
+        } catch(err) {}
 
-  .jumbotron {
-    padding: 60px 0;
-    color: #fff;
-    text-align: center;
-    background-color: #159957;
-    background-image: linear-gradient(270deg, #ff6666, #001100);
-  }
+        window.onload = function() {
+          document.getElementById('heading').className += ' loaded';
+        };
+    </script>
 
-</style>
-  </body>
+    <script src="Scripts/app.module.js"></script>
+    <script src="Scripts/home.controller.js"></script>
+    <script src="Scripts/countries.json"></script>
+    <script src="Scripts/countries.factory.js"></script>
+
+</body>
 </html>

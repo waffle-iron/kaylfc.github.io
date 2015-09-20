@@ -1,0 +1,50 @@
+body {
+    padding-bottom: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jumbotron {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(270deg, #ff6666, #001100);
+}
+
+.loaded {
+    padding: 60px 0;
+    margin-bottom: 30px;
+    height: 100%;
+    transition: all .2s;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.title span {
+    display: inline-block;
+}
+
+.state1 {
+    transform:scaleY(1.0);
+    -webkit-animation: scaleLeft .5s 1;
+    animation: scaleLeft .5s 1;
+}
+
+.state2 {
+    transform:scaleY(1.0);
+    -webkit-animation: scaleRight .5s 1;
+    animation: scaleRight .5s 1;
+}
+
+.change {
+    transition: all .2s ease-in-out;
+}
