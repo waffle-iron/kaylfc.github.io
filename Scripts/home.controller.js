@@ -2,9 +2,13 @@ angular
     .module('app')
     .controller('HomeController', HomeController);
 
-HomeController.$inject = ['countries'];
+HomeController.$inject = [
+	'countries'
+];
 
-function HomeController(countries) { 
+function HomeController(
+	countries) { 
+
 	var vm = this;
 	
 	vm.area = "World";
