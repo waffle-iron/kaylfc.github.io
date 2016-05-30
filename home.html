@@ -1,27 +1,22 @@
-<div class="row">
-  <div class="col-md-12" style="text-align: center;">
-    <h4>Sam Kay</h2>
-    <p style="margin-bottom: 0;">23</p>
-    <p style="padding-bottom: 15px;">web developer</p>
+<section class="info">
 
-    <hr>
+  <div class="row">
+    <div class="col-md-12" style="text-align: center;">
+      <h4>Sam Kay</h2>
+      <p style="margin-bottom: 0;">23</p>
+      <p style="padding-bottom: 15px;">web developer</p>
+
+      <hr style="margin-bottom: 0;">
+    </div>
   </div>
-</div>
+</section>
 
-<div class="row">
-    <div class="col-md-6 cols">
-      <h2>Work</h2>
-      <p><a class="btn btn-default" ui-sref="about" role="button">View details »</a></p>
-  </div>
-  <div class="col-md-6 cols">
+<div class="row halves">
+<!--     <div class="col-md-6">
+      <div ui-view="work"></div>
+    </div> -->
 
-      <h2>Social</h2>
-      <div class="buttons" style="padding-bottom: 10px;">
-        <a class="btn btn-default" ui-sref="home" role="button">Hide all</a>
-        <a class="btn btn-default" ui-sref=".linkedin" role="button">Show LinkedIn</a>
-        <a class="btn btn-default" ui-sref=".flickr" role="button">Show Flickr</a>
-      </div>
-      
-      <div ui-view></div>
+  <div class="col-md-12 cols">
+    <div ui-view="social"></div>
   </div>
 </div>

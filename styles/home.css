@@ -31,7 +31,7 @@ body {
 
 .loaded {
     padding: 60px 0;
-    margin-bottom: 30px;
+   // margin-bottom: 30px;
     height: 100%;
     transition: all .2s;
 }
@@ -62,4 +62,13 @@ body {
 
 .cols {
     text-align: center;
+}
+
+.info {
+    padding-top: 30px;
+    background: #fafafa;
+}
+
+.row-title {
+    margin-bottom: 20px;
 }

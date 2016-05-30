@@ -6,38 +6,49 @@ app.config(function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
         
-        // HOME STATES AND NESTED VIEWS ========================================
+        // home
         .state('home', {
             url: '/home',
-            templateUrl: 'home.html'
+           // templateUrl: 'home.html',
+            views: {
+
+                '': { templateUrl: 'home.html' },
+
+                'work@home': { 
+                    templateUrl: 'work.html',
+                    controller: 'workCtrl',
+                    controllerAs: 'work'
+                },
+
+                'social@home': { 
+                    templateUrl: 'social.html',
+                    controller: 'socialCtrl',
+                    controllerAs: 'social'
+                }
+            }
         })
 
-        // nested list with custom controller
         .state('home.linkedin', {
             url: '/linkedin',
             templateUrl: 'linkedin.html'
         })
 
-        // nested list with just some random string data
         .state('home.flickr', {
             url: '/flickr',
             templateUrl: 'flickr.html'
         })
         
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        // about
         .state('about', {
             url: '/about',
             views: {
 
-                // the main template will be placed here (relatively named)
                 '': { templateUrl: 'about.html' },
 
-                // the child views will be defined here (absolutely named)
                 'public@about': { 
                     templateUrl: 'public.html'
                 },
 
-                // for column two, we'll define a separate controller 
                 'private@about': { 
                     templateUrl: 'private.html'
                 }
