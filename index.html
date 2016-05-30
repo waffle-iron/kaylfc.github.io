@@ -5,10 +5,12 @@
     <title>Sam Kay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="Styles/home.css">
-    <link rel="stylesheet" type="text/css" href="Styles/animations.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/animations.css">
 </head>
 
 <body>
@@ -25,39 +27,14 @@
     </section>
 
     <section class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2>I'm Sam</h2>
-              <p>- a web developer</p>
-          </div>
 
+          <div ui-view></div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-              <h2>Work</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-          </div>
-          <div class="col-md-4">
-              <h2>That</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-          </div>
-          <div class="col-md-4">
-              <h2>Social</h2>
-              <p style="text-align: right;">According to <a class="" href="https://uk.linkedin.com/in/samkay1" target="_blank">Linked In</a> I have an All-Star strength profile.</p>
-
-              <p style="text-align: right;">I take average photos and occasionally post them to 
-                <a class="" href="https://www.flickr.com/photos/126442942@N07" target="_blank">Flickr</a>.</p>
-          </div>
-        </div>
-
-        <hr>
     </section>
 
-    <footer class="container">
-        <p>© Sam Kay 2016</p>
+    <footer class="container footer-container">
+        <hr>
+        <p class="footer-text">© Sam Kay 2016</p>
     </footer>
 
     <script type="text/javascript">
@@ -74,10 +51,10 @@
         };
     </script>
 
-    <script src="Scripts/app.module.js"></script>
-    <script src="Scripts/home.controller.js"></script>
-    <script src="Scripts/countries.json"></script>
-    <script src="Scripts/countries.factory.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/home.controller.js"></script>
+    <script src="data/countries.json"></script>
+    <script src="scripts/countries.factory.js"></script>
 
 </body>
 </html>
